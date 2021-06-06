@@ -152,14 +152,6 @@ namespace TimetableManagementSystem.Rooms
         //drop down for selecting a tag
         private void tagsub_cmb_DropDown(object sender, EventArgs e)
         {
-            tagsub_cmb.Items.Clear();
-            MySqlDataAdapter sda = new MySqlDataAdapter("select TagName from Tags", con);
-            DataTable dataTable = new DataTable();
-            sda.Fill(dataTable);
-            foreach (DataRow dataRow in dataTable.Rows)
-            {
-                tagsub_cmb.Items.Add(dataRow["TagName"].ToString());
-            }
         }
 
         //drop down for selecting a room
